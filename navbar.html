@@ -1,0 +1,26 @@
+{% load static %} 
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h3 class="text-white h3">Menu</h3>
+      <a href="/" class="link"><h5>Home</h5></a>
+      <span class="text-muted">Home.</span>
+      <a href="/projects/" class="link"><h5>Projects</h5></a>
+      <span class="text-muted">Look at my past Projects.</span>
+      <a href="/about/" class="link"><h5>About</h5></a>
+      <span class="text-muted">Learn more about me.</span>
+      <a href="/contact/" class="link"><h5>Contact</h5></a>
+      <span class="text-muted">Contact me.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid" style="float: right;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div style="float: right; margin: 0; color: white; font-size: larger;  padding: 0; border: 0;">
+        <p>Kaito Haneda</p>
+      </div>
+    </div>
+  </nav>

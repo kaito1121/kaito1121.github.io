@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <title>Protfolio | Kaito Haneda</title>
+</head>
+<body>
+    <!-- CSS CUSTOM -->
+    <link rel="stylesheet" href="style.css">
+
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h3 class="text-white h3">Menu</h3>
+          <a href="/" class="link"><h5>Home</h5></a>
+          <span class="text-muted">Home.</span>
+          <a href="/projects/" class="link"><h5>Projects</h5></a>
+          <span class="text-muted">Look at my past Projects.</span>
+          <a href="/about/" class="link"><h5>About</h5></a>
+          <span class="text-muted">Learn more about me.</span>
+          <a href="/contact/" class="link"><h5>Contact</h5></a>
+          <span class="text-muted">Contact me.</span>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid" style="float: right;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div style="float: right; margin: 0; color: white; font-size: larger;  padding: 0; border: 0;">
+            <p>Kaito Haneda</p>
+          </div>
+        </div>
+    </nav>
+        <div class="image-container bottom-space">
+        <img src="images/index-pic.jpg" alt="img" style="width: 100%;">
+        <div class="bottom-left" style="font-size: 2vw;">
+          <p>Welcome</p>
+          <form action="/about/" class="">
+            <button type="submit" class="btn btn-outline-secondary">Learn More</button>
+          </form>
+        </div>
+    </div>
+    <div class="container-fluid bottom-space" style="background-color:rgba(235, 235, 235, 0.932)">  
+        <h1 class="title">My Skills</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" style="width: 33vw;">
+                <img src="images/Python-Logo.png" class="center-img"> 
+                <h1 class="text">I have experience with Python</h1>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" style="width: 33vw;">
+                <img src="images/html-logo.png" class="center-img"> 
+                <h1 class="text">I can create simle Websites using html</h1>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" style="width: 33vw;">
+                <img src="images/css-logo.png" class="center-img"> 
+                <h1 class="text">I have experience with css and bootstrap5 and can create responsive websites using these tools</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h1 class="title">Recent Projects</h1>
+        <div class="row">
+        {% for obj in objects %}
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <a href="/portfolio/{{ obj.id }}/" style="color:black">
+                    <div class="image-container">
+                        <img src="{{ obj.picture.url }}" style="width: 100%;">
+                        <div class="top-left">
+                            {{ obj.title }}
+                        </div>
+                        <div class="bottom-left image-text">
+                            <p>{{ obj.description }}</p>
+                            <form action="/portfolio/{{ obj.id }}" class="">
+                                <button type="submit" class="btn btn-outline-secondary">Learn More</button>
+                            </form>
+                        </div>   
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>Kaito Haneda</h3>
+
+            <p class="footer-links">
+                <a href="/">Home</a>
+                |
+                <a href="/projects/">Projects</a>
+                |
+                <a href="/about/">About</a>
+                |
+                <a href="/contact/">Contact</a>
+            </p>
+            <p class="footer-company-name">© 2021 Kaito Haneda</p>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About me</span>
+                We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+            <div class="footer-icons">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

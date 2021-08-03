@@ -1,0 +1,25 @@
+{% extends "pages/base.html" %}
+
+{% block content %}
+{% load static %}
+{% load widget_tweaks %}
+<link rel="stylesheet" href="{% static "contact.css" %}">
+<div class="container">
+  <form>
+
+    <label for="fname">First Name</label>
+	{{ form.email|attr:"placeholder:Your Email.."|attr:"id:fname"|attr:"class:input_field"}}
+
+    <label for="lname">Last Name</label>
+    {{ form.subject|attr:"placeholder:Subject.."|attr:"id:lname"|attr:"class:input_field"}}
+
+
+    <label for="message">Message</label>
+	{{ form.message|attr:"placeholder:Message.."|attr:"id:subject"|attr:"class:input_field"|attr:"style:height:200px"}}
+
+    <input  class="btn btn-outline-secondary" type="submit" value="Send">
+
+  </form>
+</div>
+
+{% endblock content %}
